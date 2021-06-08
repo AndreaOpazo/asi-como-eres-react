@@ -1,13 +1,16 @@
+import React, { Component } from 'react'
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import NavBar from './components/NavBar/NavBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h2 className='App-logo textoRosa'>Hola, soy Andrea!</h2>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <NavBar />
+      </div>
+    )
+  }
 }
 
 export default App;
