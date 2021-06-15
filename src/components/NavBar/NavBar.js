@@ -1,44 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CartWidget from '../CartWidget/CartWidget';
 import { Menu } from 'semantic-ui-react';
 
-class NavBar extends Component {
-  state = {};
-
-  handleItemClick = (_e, { name }) => this.setState({ activeItem: name });
-
-  render() {
-    const { activeItem } = this.state;
-
-    return (
-      <Menu pointing secondary>
-        <Menu.Item
-          name="Inicio"
-          active={activeItem === 'Inicio'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name="Mujer"
-          active={activeItem === 'Mujer'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name="Nina"
-          active={activeItem === 'Nina'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name="Nuevos Lanzamientos"
-          active={activeItem === 'Nuevos Lanzamientos'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name="Rebajas"
-          active={activeItem === 'Rebajas'}
-          onClick={this.handleItemClick}
-        />
-      </Menu>
-    );
-  }
-}
+const NavBar = () => {
+  return (
+    <Menu secondary floated="right">
+      <Menu.Item> Home </Menu.Item>
+      <Menu.Item> Productos </Menu.Item>
+      <Menu.Item> +Info </Menu.Item>
+      <Menu.Item> Contacto </Menu.Item>
+      <Menu.Item>
+        <CartWidget size="large" />
+      </Menu.Item>
+    </Menu>
+  );
+};
 
 export default NavBar;
