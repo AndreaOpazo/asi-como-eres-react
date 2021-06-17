@@ -6,7 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Header />
       <ItemListContainer />
     </div>

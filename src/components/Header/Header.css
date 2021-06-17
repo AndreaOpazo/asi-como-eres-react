@@ -1,7 +1,9 @@
-.margin-logo {
-  margin-top: 1.5em;
-}
-
-.bg-header {
-  background: #e6e6fa;
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5vh;
+  background-color: #e6e6fa;
+  color: white;
+  width: 100%;
 }

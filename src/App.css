@@ -1,1 +1,6 @@
 /** Para agregar styles mas adelante*/
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
