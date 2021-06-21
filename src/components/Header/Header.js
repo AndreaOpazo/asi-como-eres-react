@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid, Image, Input, Button } from 'semantic-ui-react';
-import NavBar from '../NavBar/NavBar';
+import Navigation from '../Navigation/Navigation';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 const src = './images/logo.png';
 
@@ -11,7 +12,9 @@ const Header = () => {
       <Grid verticalAlign="middle" stackable>
         <Grid.Row>
           <Grid.Column only="tablet computer" width={4}>
-            <Image src={src} size="small" spaced className="margin-logo" />
+            <Link to={'/'}>
+              <Image src={src} size="small" spaced className="margin-logo" />
+            </Link>
           </Grid.Column>
           <Grid.Column only="mobile">
             <Image src={src} size="small" centered className="margin-logo" />
@@ -26,7 +29,7 @@ const Header = () => {
             <Button circular color="instagram" icon="instagram" />
           </Grid.Column>
           <Grid.Column computer={8} textAlign="right">
-            <NavBar />
+            <Navigation />
           </Grid.Column>
         </Grid.Row>
       </Grid>

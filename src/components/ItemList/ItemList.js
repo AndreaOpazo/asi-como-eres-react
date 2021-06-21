@@ -1,12 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../Item/Item';
 import './ItemList.css';
 
-const ItemList = ({ data }) => {
+const ItemList = ({ characters }) => {
   return (
     <div className="UserSection">
-      {data.map((item) => {
-        return <Item items={item} key={item.id} />;
+      {characters.map((character) => {
+        return (
+          <div key={character.id}>
+            <Link to={`/detail/${character.id}`}>
+              <Item character={character} />
+            </Link>
+          </div>
+        );
       })}
     </div>
   );
