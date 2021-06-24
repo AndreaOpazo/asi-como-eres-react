@@ -1,13 +1,17 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Card, Grid } from '@material-ui/core';
-import { Tab, AppBar } from '@material-ui/core';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Card,
+  Grid,
+  Tab,
+  AppBar,
+  CardContent,
+  CardMedia,
+  Typography,
+} from '@material-ui/core';
 import ItemCount from '../../components/ItemCount/ItemCount';
-import './ProductDetail.css';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
+import './ProductDetail.css';
 
 const useStyles = makeStyles(() => ({
   root: {
