@@ -3,3 +3,9 @@
   justify-content: center;
   margin: 20px;
 }
+
+.cardStyles {
+  text-align: center;
+  font-size: 20px;
+  padding: 5;
+}

@@ -1,4 +1,7 @@
-/** Para agregar styles mas adelante*/
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
 .App {
   display: flex;
   justify-content: center;

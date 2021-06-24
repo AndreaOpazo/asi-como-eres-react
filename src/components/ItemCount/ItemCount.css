@@ -1,16 +1,14 @@
 .CounterSection {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 20vh;
-  font-size: 24px;
-  padding: 20px;
-  background-color: #e6e6fa;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 20px;
 }
 
 .span-counter {
-  font-size: 30px;
+  font-size: 20px;
+  margin-left: 85px;
 }
 
 .btn-section {
