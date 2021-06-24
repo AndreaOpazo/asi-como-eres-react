@@ -1,9 +1,10 @@
 import React from 'react';
+import './Info.css';
 
 const Info = () => {
   return (
-    <div>
-      <h1>INFO</h1>
+    <div className="Info">
+      <h1>PROXIMAMENTE INFO!</h1>
     </div>
   );
 };

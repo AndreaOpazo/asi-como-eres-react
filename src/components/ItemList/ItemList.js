@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Item from '../Item/Item';
 import './ItemList.css';
 
-const ItemList = ({ characters }) => {
+const ItemList = ({ products }) => {
   return (
     <div className="UserSection">
-      {characters.map((character) => {
+      {products.map((product) => {
         return (
-          <div key={character.id}>
-            <Link to={`/detail/${character.id}`}>
-              <Item character={character} />
+          <div key={product.id}>
+            <Link to={`/producto/${product.id}`}>
+              <Item product={product} />
             </Link>
           </div>
         );
