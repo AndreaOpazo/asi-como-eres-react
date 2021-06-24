@@ -65,16 +65,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             </div>
           </Fade>
         </Modal>
-        {/* <Popup
-          // content={agregarAlCarrito}
-          on="click"
-          pinned
-          trigger={<Button color="black">Agregar al carrito</Button>}
-        />
-        {agregarAlCarrito} */}
-        {/* <Button color="black" onClick={agregarAlCarrito}>
-          Agregar al carrito
-        </Button> */}
       </div>
     </div>
   );

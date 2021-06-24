@@ -1,8 +1,13 @@
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
+import { IconButton } from '@material-ui/core';
+import { AddShoppingCart } from '@material-ui/icons';
 
-const CartWidget = ({ size }) => {
-  return <Icon name="shopping cart" size={size} />;
+const CartWidget = () => {
+  return (
+    <IconButton color="inherit">
+      <AddShoppingCart />
+    </IconButton>
+  );
 };
 
 export default CartWidget;
