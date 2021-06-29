@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Backdrop, Fade, Button, IconButton } from '@material-ui/core';
+import { Button, IconButton } from '@material-ui/core';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import './ItemCount.css';
@@ -18,53 +18,27 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     if (nuevaCantidad >= 1) setNumber(number - 1);
   };
 
-  //logica para aviso al usuario
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpen = () => {
-    setOpenModal(true);
-  };
-
-  const handleClose = () => {
-    setOpenModal(false);
-  };
-
   //Cuando se agrega al carrito un producto
-  const agregarAlCarrito = () => (stock > 0 ? onAdd() : null);
+  const agregarAlCarrito = () => {
+    if (stock > 0) onAdd(number);
+  };
 
   return (
     <div className="CounterSection">
-      <span className="span-counter">{number}</span>
       <div className="btn-section">
-        <div>
+        <div className="icon-section">
           <IconButton onClick={number > 1 ? restarUno : null}>
             <RemoveCircleIcon fontSize="large" />
           </IconButton>
+          <span className="span-counter">{number}</span>
           <IconButton onClick={stock > 0 ? sumarUno : null}>
             <AddCircleIcon fontSize="large" />
           </IconButton>
         </div>
         <br />
-        <Button variant="contained" color="primary" onClick={handleOpen}>
+        <Button variant="contained" color="primary" onClick={agregarAlCarrito}>
           Agregar al carrito
         </Button>
-        <Modal
-          aria-labelledby="transition-modal-title"
-          className="modal"
-          open={openModal}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={openModal}>
-            <div className="fade-paper">
-              <h2 id="transition-modal-title">{agregarAlCarrito()}</h2>
-            </div>
-          </Fade>
-        </Modal>
       </div>
     </div>
   );

@@ -1,1 +1,17 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.fade-paper {
+  background: lavender;
+  padding: 50px;
+  box-shadow: 5px 5px;
+  border: '2px solid #000';
+  border-radius: 10px;
+}
+
+.btn-compra {
+  margin-bottom: 15px;
+}

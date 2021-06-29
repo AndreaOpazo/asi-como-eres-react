@@ -3,31 +3,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .span-counter {
   font-size: 20px;
-  margin-left: 85px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .btn-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fade-paper {
-  background: lavender;
-  padding: 50px;
-  box-shadow: 5px 5px;
-  border: '2px solid #000';
-  border-radius: 10px;
+.icon-section {
+  margin-right: 20px;
 }

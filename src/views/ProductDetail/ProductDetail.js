@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
@@ -8,9 +8,14 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  Button,
+  Modal,
+  Backdrop,
+  Fade,
 } from '@material-ui/core';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
+import { Link } from 'react-router-dom';
 import './ProductDetail.css';
 
 const useStyles = makeStyles(() => ({
@@ -26,13 +31,23 @@ const useStyles = makeStyles(() => ({
 const ProductDetail = ({ product }) => {
   const classes = useStyles();
 
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = useState('1');
+  const [cantidadPedida, setCantidadPedida] = useState(0);
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClose = () => {
+    setOpenModal(false);
+  };
 
   const handleChange = (_e, newValue) => {
     setValue(newValue);
   };
 
-  const agregarAlCarrito = () => 'El producto se agrego al carrito.';
+  const agregarAlCarrito = (cantidadPedida) => {
+    setCantidadPedida(cantidadPedida);
+    setOpenModal(true);
+  };
 
   const {
     description,
@@ -58,7 +73,18 @@ const ProductDetail = ({ product }) => {
             <Typography variant="SUBTITLE1" color="textSecondary">
               Unidades Disponibles: 5
             </Typography>
-            <ItemCount stock={5} initial={1} onAdd={agregarAlCarrito} />
+            {cantidadPedida === 0 ? (
+              <ItemCount stock={5} initial={1} onAdd={agregarAlCarrito} />
+            ) : (
+              <div className="btn-compra">
+                <Link to="/cart">
+                  <br />
+                  <Button variant="contained" color="primary">
+                    Terminar mi compra
+                  </Button>
+                </Link>
+              </div>
+            )}
             <TabContext value={value}>
               <AppBar position="static" color="transparent">
                 <TabList onChange={handleChange} indicatorColor="primary">
@@ -98,6 +124,25 @@ const ProductDetail = ({ product }) => {
           </CardContent>
         </Grid>
       </Card>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        className="modal"
+        open={openModal}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={openModal}>
+          <div className="fade-paper">
+            <h2 id="transition-modal-title">
+              Se agrego el producto al carrito!
+            </h2>
+          </div>
+        </Fade>
+      </Modal>
     </Grid>
   );
 };
