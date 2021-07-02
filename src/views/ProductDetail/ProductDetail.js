@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
@@ -17,6 +17,7 @@ import ItemCount from '../../components/ItemCount/ItemCount';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 import './ProductDetail.css';
+import { CartContext } from '../../CartContext';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -33,8 +34,9 @@ const ProductDetail = ({ product }) => {
 
   const [value, setValue] = useState('1');
   const [cantidadPedida, setCantidadPedida] = useState(0);
-
   const [openModal, setOpenModal] = useState(false);
+
+  const { addItem } = useContext(CartContext);
 
   const handleClose = () => {
     setOpenModal(false);
@@ -45,6 +47,7 @@ const ProductDetail = ({ product }) => {
   };
 
   const agregarAlCarrito = (cantidadPedida) => {
+    addItem(product, cantidadPedida);
     setCantidadPedida(cantidadPedida);
     setOpenModal(true);
   };
