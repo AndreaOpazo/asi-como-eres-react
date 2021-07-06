@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import Carousel from '../Carousel/Carousel';
+import Spinner from '../Spinner/Spinner';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -14,12 +16,18 @@ const ItemListContainer = () => {
       const products = await response.json();
       setProducts(products.slice(0, 4));
     })();
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   return (
     <div className="ItemListContainer">
       <Carousel />
-      <ItemList products={products} />
+      {isLoading 
+        ? <Spinner />
+        : <ItemList products={products} />
+      }
     </div>
   );
 };
