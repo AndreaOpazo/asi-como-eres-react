@@ -29,7 +29,9 @@ const Navigation = () => {
       <Link to="/contacto">
         <Tab classes={{ root: classes.tab }} label="CONTACTO" />
       </Link>
-      <CartWidget />
+      <Link className='Link' to="/cart">
+        <CartWidget />
+      </Link>
     </Tabs>
   );
 };
