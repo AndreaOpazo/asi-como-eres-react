@@ -5,17 +5,20 @@ import './ItemList.css';
 
 const ItemList = ({ products }) => {
   return (
-    <div className="UserSection">
-      {products.map((product) => {
-        return (
-          <div key={product.id}>
-            <Link to={`/producto/${product.id}`}>
-              <Item product={product} />
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h3 className='ProductsTitle'>PRODUCTOS DESTACADOS</h3>
+      <div className="ProductsSection">
+        {products.map((product) => {
+          return (
+            <div key={product.id}>
+              <Link to={`/producto/${product.id}`}>
+                <Item product={product} />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

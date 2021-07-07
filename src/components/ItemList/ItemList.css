@@ -1,4 +1,10 @@
-.UserSection {
+.ProductsSection {
   display: flex;
   justify-content: space-evenly;
+}
+
+.ProductsTitle{
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
