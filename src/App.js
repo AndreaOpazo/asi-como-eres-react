@@ -8,7 +8,7 @@ import Products from './views/Products/Products';
 import Info from './views/Info/Info';
 import Contact from './views/Contact/Contact';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Cart from './components/Cart/Cart';
+import Cart from './views/Cart/Cart';
 import { CartProvider } from './CartContext';
 
 const App = () => {
