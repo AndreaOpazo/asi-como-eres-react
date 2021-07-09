@@ -3,22 +3,18 @@ import ItemList from '../ItemList/ItemList';
 import Carousel from '../Carousel/Carousel';
 import Spinner from '../Spinner/Spinner';
 import './ItemListContainer.css';
+import { db } from '../../firebase';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      const response = await fetch(
-        'https://api-productos-prueba.herokuapp.com/productos'
-      );
-      const products = await response.json();
-      setProducts(products.slice(0, 4));
-    })();
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+    db.collection('products').onSnapshot((querySnapshot) => {
+      const mappedProducts = querySnapshot.docs.map(product => ({ ...product.data() }))
+      setProducts(mappedProducts.slice(0, 4));
+    });
+    setIsLoading(false);
   }, []);
 
   return (
