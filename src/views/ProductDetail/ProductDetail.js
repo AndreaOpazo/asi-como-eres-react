@@ -64,7 +64,7 @@ const ProductDetail = ({ product }) => {
           <CardMedia
             className={classes.cover}
             component="img"
-            image={`../images/${product.image}`}
+            image={product.image}
           />
         </Grid>
         <Grid item xs={8}>

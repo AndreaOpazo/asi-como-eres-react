@@ -64,7 +64,7 @@ const CartList = () => {
             <TableRow key={item.id}>
               <TableCell align="center">
               <img
-                src={`../images/${item.image}`}
+                src={item.image}
                 width="130px"
                 height="auto"
                 alt="product"

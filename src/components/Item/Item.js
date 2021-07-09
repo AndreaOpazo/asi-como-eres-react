@@ -25,7 +25,7 @@ const Item = ({ product }) => {
           <CardMedia
             component="img"
             height="200"
-            image={`./images/${product.image}`}
+            image={product.image}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
