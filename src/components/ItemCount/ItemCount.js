@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, IconButton } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import Button from '../Button/Button';
 import './ItemCount.css';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -36,9 +37,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           </IconButton>
         </div>
         <br />
-        <Button variant="contained" color="primary" onClick={agregarAlCarrito}>
-          Agregar al carrito
-        </Button>
+        <Button text="Agregar al carrito" event={agregarAlCarrito} disabled={stock === 0} />
       </div>
     </div>
   );

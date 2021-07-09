@@ -12,6 +12,9 @@
   border-radius: 10px;
 }
 
-.btn-compra {
-  margin-bottom: 15px;
+.btnLinkSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin: 30px 0px 30px;
 }

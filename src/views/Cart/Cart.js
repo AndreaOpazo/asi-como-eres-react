@@ -3,7 +3,8 @@ import { CartContext } from '../../CartContext';
 import CartList from '../../components/CartList/CartList';
 import Alert from '@material-ui/lab/Alert';
 import { Link } from 'react-router-dom';
-import { Button, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
+import Button from '../../components/Button/Button';
 import './Cart.css';
 
 const Cart = () => {
@@ -22,9 +23,7 @@ const Cart = () => {
       {cart.length ? <CartList /> : msgAlert}
       <Link to="/">
         <br/>
-        <Button variant="contained" color="primary">
-          Volver al inicio
-        </Button>
+        <Button text="Volver al inicio" />
       </Link>
     </Container>
   );

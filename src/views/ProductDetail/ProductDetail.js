@@ -8,14 +8,14 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Button,
   Modal,
   Backdrop,
   Fade,
 } from '@material-ui/core';
-import ItemCount from '../../components/ItemCount/ItemCount';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
+import ItemCount from '../../components/ItemCount/ItemCount';
+import Button from '../../components/Button/Button';
 import './ProductDetail.css';
 import { CartContext } from '../../CartContext';
 
@@ -27,6 +27,9 @@ const useStyles = makeStyles(() => ({
   cover: {
     width: 500,
   },
+  btnCompra: {
+    marginLeft: 20
+  }
 }));
 
 const ProductDetail = ({ product }) => {
@@ -74,20 +77,26 @@ const ProductDetail = ({ product }) => {
             </Typography>
             <Typography variant="h5">${product.price}</Typography>
             <Typography variant="SUBTITLE1" color="textSecondary">
-              Unidades Disponibles: 5
+              {
+                product.stock === 0
+                  ? "Sin stock" 
+                  : `Unidades Disponibles: ${product.stock}`
+              }
             </Typography>
-            {cantidadPedida === 0 ? (
-              <ItemCount stock={5} initial={1} onAdd={agregarAlCarrito} />
-            ) : (
-              <div className="btn-compra">
-                <Link to="/cart">
-                  <br />
-                  <Button variant="contained" color="primary">
-                    Terminar mi compra
-                  </Button>
-                </Link>
-              </div>
-            )}
+            {
+              cantidadPedida === 0 
+                ? (<ItemCount stock={product.stock} initial={1} onAdd={agregarAlCarrito} />) 
+                : (
+                    <div className="btnLinkSection">
+                      <Link to="/">
+                        <Button text="Volver" />
+                      </Link>
+                      <Link to="/cart" className={classes.btnCompra}>
+                        <Button text="Terminar mi compra" />
+                      </Link>
+                    </div>
+                  )
+            }
             <TabContext value={value}>
               <AppBar position="static" color="transparent">
                 <TabList onChange={handleChange} indicatorColor="primary">
