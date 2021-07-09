@@ -1,0 +1,175 @@
+{
+  "products": {
+    "1": {
+      "id": 1,
+      "title": "RIÑONERA YORK VERDE",
+      "price": 900,
+      "description": {
+        "height": "16 cm",
+        "width": "36 cm",
+        "depth": "11 cm",
+        "detail": "Las riñoneras York, son súper clásicas! De diseño sobrio y urbano, está pensada para acompañarte durante tus rutinas por la ciudad! Pero no por eso la dejamos de lado para ir a la facu o el trabajo! Además es perfecta para llevarla de viaje como acompañante de aventuras.  Al igual que el resto del equipo, posee un llavero para colgar tus auriculares o tus llaves en su interior. Anímate y sacala a pasear a donde quieras!",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 1 año."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_1.jpg"
+    },
+    "2": {
+      "id": 2,
+      "title": "RIÑONERA YORK CREMA",
+      "price": 900,
+      "description": {
+        "height": "16 cm",
+        "width": "36 cm",
+        "depth": "11 cm",
+        "detail": "Las riñoneras York, son súper clásicas! De diseño sobrio y urbano, está pensada para acompañarte durante tus rutinas por la ciudad! Pero no por eso la dejamos de lado para ir a la facu o el trabajo! Además es perfecta para llevarla de viaje como acompañante de aventuras.  Al igual que el resto del equipo, posee un llavero para colgar tus auriculares o tus llaves en su interior. Anímate y sacala a pasear a donde quieras!",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 1 año."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_2.jpg"
+    },
+    "3": {
+      "id": 3,
+      "title": "RIÑONERA YORK RED",
+      "price": 900,
+      "description": {
+        "height": "16 cm",
+        "width": "36 cm",
+        "depth": "11 cm",
+        "detail": "Las riñoneras York, son súper clásicas! De diseño sobrio y urbano, está pensada para acompañarte durante tus rutinas por la ciudad! Pero no por eso la dejamos de lado para ir a la facu o el trabajo! Además es perfecta para llevarla de viaje como acompañante de aventuras.  Al igual que el resto del equipo, posee un llavero para colgar tus auriculares o tus llaves en su interior. Anímate y sacala a pasear a donde quieras!",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 1 año."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_3.jpg"
+    },
+    "4": {
+      "id": 4,
+      "title": "RIÑONERA YORK BLUE",
+      "price": 900,
+      "description": {
+        "height": "16 cm",
+        "width": "36 cm",
+        "depth": "11 cm",
+        "detail": "Las riñoneras York, son súper clásicas! De diseño sobrio y urbano, está pensada para acompañarte durante tus rutinas por la ciudad! Pero no por eso la dejamos de lado para ir a la facu o el trabajo! Además es perfecta para llevarla de viaje como acompañante de aventuras.  Al igual que el resto del equipo, posee un llavero para colgar tus auriculares o tus llaves en su interior. Anímate y sacala a pasear a donde quieras!",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 1 año."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_4.jpg"
+    },
+    "5": {
+      "id": 5,
+      "title": "BILLETERA BALTIMORE VERDE OSCURO",
+      "price": 900,
+      "description": {
+        "height": "35 cm",
+        "width": "45 cm",
+        "depth": "18 cm",
+        "detail": "Baltimore es la integrante más pequeña, pero la que siempre está en todos lados. Con 8 bolsillos internos, y forro a rayas.",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 6 meses."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_5.jpg"
+    },
+    "6": {
+      "id": 6,
+      "title": "BILLETERA BALTIMORE BLACK",
+      "price": 900,
+      "description": {
+        "height": "35 cm",
+        "width": "45 cm",
+        "depth": "18 cm",
+        "detail": "Baltimore es la integrante más pequeña, pero la que siempre está en todos lados. Con 8 bolsillos internos, y forro a rayas.",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 6 meses."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_6.jpg"
+    },
+    "7": {
+      "id": 7,
+      "title": "BILLETERA BALTIMORE OLIVA",
+      "price": 900,
+      "description": {
+        "height": "35 cm",
+        "width": "45 cm",
+        "depth": "18 cm",
+        "detail": "Baltimore es la integrante más pequeña, pero la que siempre está en todos lados. Con 8 bolsillos internos, y forro a rayas.",
+        "info": {
+          "dimension": "",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 6 meses."
+        }
+      },
+      "category": "accesorios",
+      "image": "IMG_7.jpg"
+    },
+    "8": {
+      "id": 8,
+      "title": "MOCHILA VERONA – BORDÓ",
+      "price": 3500,
+      "description": {
+        "height": "40 cm",
+        "width": "28 cm",
+        "depth": "12 cm",
+        "detail": "Verona es la más inquieta de la familia, pero no así la menos canchera! De diseño súper ligero, Verona cuenta con dos bolsillos delanteros y uno trasero! Pero eso no es todo! Al igual que el resto del equipo, posee un llavero para colgar tus auriculares o tus llaves. También tiene bolsillo interno con cierre para colocar todas esas cosas que no se pueden perder! A diferencia de otras, no cuenta con compartimiento para la computadora. Verona está pensada especialmente para acompañarte en tus salidas inesperadas o en esas escapadas que necesitas cuando la rutina ya es suficiente! Animate, llevala a donde quieras!",
+        "info": {
+          "dimension": "15 x 15 x 15 cm",
+          "waist": "",
+          "colour": "",
+          "assurance": "Garantía por 2 años."
+        }
+      },
+      "category": "mochilas",
+      "image": "IMG_8.jpg"
+    },
+    "9": {
+      "id": 9,
+      "title": "HOODIE OSWILDER",
+      "price": 2950,
+      "description": {
+        "height": "",
+        "width": "",
+        "depth": "",
+        "detail": "Un nuevo compañero se suma a la familia. El hoodie perfecto para el invierno. Capucha doble, cordones estampados y frase.",
+        "info": {
+          "dimension": "70 x 54 cm",
+          "waist": "M",
+          "colour": "Black",
+          "assurance": ""
+        }
+      },
+      "category": "indumentaria",
+      "image": "IMG_9.jpg"
+    }
+  }
+}
