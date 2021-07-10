@@ -6,25 +6,16 @@ import {
   CardMedia,
   Typography,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import './Item.css';
 
 const Item = ({ product }) => {
-  const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-  });
-
-  const classes = useStyles();
-
   return (
     <div className="UserCard">
-      <Card className={(classes.root, 'cardStyles')}>
+      <Card className="cardStyles">
         <CardActionArea>
           <CardMedia
             component="img"
-            height="200"
+            height="300"
             image={product.image}
           />
           <CardContent>
@@ -33,6 +24,14 @@ const Item = ({ product }) => {
             </Typography>
             <Typography variant="h4" color="textSecondary" component="h1">
               <span>${product.price}</span>
+            </Typography>
+            <br />
+            <Typography variant="subtitle1" color="textSecondary">
+              {
+                product.stock === 0
+                  ? "Sin stock" 
+                  : `Unidades Disponibles: ${product.stock}`
+              }
             </Typography>
           </CardContent>
         </CardActionArea>

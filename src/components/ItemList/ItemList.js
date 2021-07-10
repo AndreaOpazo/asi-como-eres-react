@@ -6,8 +6,12 @@ import './ItemList.css';
 const ItemList = ({ products }) => {
   return (
     <>
-      <h3 className='ProductsTitle'>PRODUCTOS DESTACADOS</h3>
-      <div className="ProductsSection">
+      <div className="headerProducts">
+        <h3>MIRA TODAS NUESTRAS CATEGORIAS</h3>
+        <h5>DESCUBRÍ TODAS NUESTRAS OFERTAS</h5>
+        <hr className="hrStyle"></hr>
+      </div>
+      <div className="productsSection">
         {products.map((product) => {
           return (
             <div key={product.id}>
