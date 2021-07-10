@@ -10,9 +10,9 @@ import {
   Typography,
   Modal,
   Backdrop,
-  Fade,
+  Fade
 } from '@material-ui/core';
-import { TabContext, TabList, TabPanel } from '@material-ui/lab';
+import { TabContext, TabList, TabPanel, Alert, AlertTitle } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import Button from '../../components/Button/Button';
@@ -137,22 +137,19 @@ const ProductDetail = ({ product }) => {
         </Grid>
       </Card>
       <Modal
-        aria-labelledby="transition-modal-title"
+        aria-labelledby="avisoCart"
         className="modal"
         open={openModal}
         onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
       >
         <Fade in={openModal}>
-          <div className="fade-paper">
-            <h2 id="transition-modal-title">
-              Se agrego el producto al carrito!
-            </h2>
-          </div>
+          <Alert id='avisoCart' severity="success">
+            <AlertTitle>
+              Se agregó el producto al carrito!
+            </AlertTitle>
+          </Alert>
         </Fade>
       </Modal>
     </Grid>
