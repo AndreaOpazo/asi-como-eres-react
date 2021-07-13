@@ -89,10 +89,10 @@ const ProductDetail = ({ product }) => {
                 : (
                     <div className="btnLinkSection">
                       <Link to="/">
-                        <Button text="Volver" />
+                        <Button variant="contained" text="Volver" />
                       </Link>
                       <Link to="/cart" className={classes.btnCompra}>
-                        <Button text="Terminar mi compra" />
+                        <Button variant="contained" text="Terminar mi compra" />
                       </Link>
                     </div>
                   )

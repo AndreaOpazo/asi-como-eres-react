@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Table,
   IconButton,
-  Button,
   TableBody,
   TableCell,
   TableContainer,
@@ -16,6 +15,7 @@ import {
   } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { CartContext } from '../../CartContext';
+import Button from '../Button/Button';
 
 const CartList = () => {
   const { cart, removeItem, clear } = useContext(CartContext);
@@ -55,7 +55,7 @@ const CartList = () => {
             <TableCell align="right"><b>Precio Unitario</b></TableCell>
             <TableCell align="right"><b>Importe</b></TableCell>
             <TableCell align="center">
-              <Button variant="outlined" onClick={() => clear()}>Vaciar Carrito</Button>
+              <Button text="Vaciar carrito" variant="outlined" event={() => clear()} />
             </TableCell>
           </TableRow>
         </TableHead>
@@ -108,11 +108,21 @@ const CartList = () => {
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
-            <TableCell classes={{root: classes.cell}}><b>Total</b></TableCell>
-            <TableCell/>
+            <TableCell><b>Total</b></TableCell>
+            <TableCell />
             <TableCell align="center">
               ${calcularTotalYEnvio(shipping === 'withShipping')}
             </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell classes={{root: classes.cell}}/>
+            <TableCell classes={{root: classes.cell}}/>
+            <TableCell classes={{root: classes.cell}}/>
+            <TableCell />
+            <TableCell align="right">
+              <Button text="Comprar" variant="contained" />
+            </TableCell>
+            <TableCell classes={{root: classes.cell}}/>
           </TableRow>
         </TableBody>
       </Table>

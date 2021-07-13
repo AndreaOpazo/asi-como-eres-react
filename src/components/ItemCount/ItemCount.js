@@ -37,7 +37,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           </IconButton>
         </div>
         <br />
-        <Button text="Agregar al carrito" event={agregarAlCarrito} disabled={stock === 0} />
+        <Button variant="contained" text="Agregar al carrito" event={agregarAlCarrito} disabled={stock === 0} />
       </div>
     </div>
   );
