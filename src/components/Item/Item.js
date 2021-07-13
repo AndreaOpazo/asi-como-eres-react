@@ -19,10 +19,10 @@ const Item = ({ product }) => {
             image={product.image}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h6" component="h2">
               {product.title}
             </Typography>
-            <Typography variant="h4" color="textSecondary" component="h1">
+            <Typography variant="h5" color="textSecondary" component="h1">
               <span>${product.price}</span>
             </Typography>
             <br />

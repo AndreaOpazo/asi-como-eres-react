@@ -7,7 +7,7 @@ const ItemList = ({ products }) => {
   return (
     <>
       <div className="headerProducts">
-        <h3>MIRA TODAS NUESTRAS CATEGORIAS</h3>
+        <h4>MIRA TODAS NUESTRAS CATEGORIAS</h4>
         <h5>DESCUBRÍ TODAS NUESTRAS OFERTAS</h5>
         <hr className="hrStyle"></hr>
       </div>
