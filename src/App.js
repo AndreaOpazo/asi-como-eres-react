@@ -6,8 +6,9 @@ import ProductDetailContainer from './views/ProductDetailContainer/ProductDetail
 import Products from './views/Products/Products';
 import Info from './views/Info/Info';
 import Contact from './views/Contact/Contact';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Checkout from './views/Checkout/Checkout';
 import Cart from './views/Cart/Cart';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CartProvider } from './CartContext';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/contacto" component={Contact} />
             <Route path="/producto/:id" component={ProductDetailContainer} />
             <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
           </Switch>
         </div>
       </Router>

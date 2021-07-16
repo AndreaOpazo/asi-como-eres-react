@@ -1,0 +1,12 @@
+.checkoutForm {
+  display: grid;
+  grid-template-areas: 
+    'name name'
+    'phone email';
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.name { grid-area: name; }
+.phone { grid-area: phone; }
+.email { grid-area: email; }
