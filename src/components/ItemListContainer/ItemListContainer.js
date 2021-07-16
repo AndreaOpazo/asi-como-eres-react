@@ -3,17 +3,17 @@ import ItemList from '../ItemList/ItemList';
 import Carousel from '../Carousel/Carousel';
 import Spinner from '../Spinner/Spinner';
 import './ItemListContainer.css';
-import { db } from '../../firebase';
+import { getProducts } from '../../firebase';
 import { Container } from '@material-ui/core';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    db.collection('products').onSnapshot((querySnapshot) => {
-      const mappedProducts = querySnapshot.docs.map(product => ({ ...product.data() }))
+    (async () => {
+      const mappedProducts = await getProducts();
       setProducts(mappedProducts);
-    });
+    })();
   }, []);
 
   return (

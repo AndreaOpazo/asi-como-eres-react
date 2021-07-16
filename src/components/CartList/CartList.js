@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Table,
@@ -8,14 +8,13 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
-  Radio,
-  RadioGroup,
-  FormControlLabel
+  Paper
   } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { CartContext } from '../../CartContext';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
+import { calcularTotalYEnvio } from '../../utils';
 
 const CartList = () => {
   const { cart, removeItem, clear } = useContext(CartContext);
@@ -26,23 +25,7 @@ const CartList = () => {
     },
   }));
 
-  const [shipping, setShipping] = useState('withoutShipping');
-
-  const handleChange = (e) => {
-    setShipping(e.target.value);
-  };
-
   const classes = useStyles();
-
-  const calcularTotalYEnvio = (conEnvio) => {
-    const subtotal = cart.reduce(
-      (acumuladorPrecio, {item, quantity}) =>
-        item.price * quantity +
-        acumuladorPrecio,
-      0
-    );
-    return conEnvio ? subtotal + 300 : subtotal;
-  };
   
   return (
     <TableContainer component={Paper}>
@@ -87,42 +70,37 @@ const CartList = () => {
             <TableCell classes={{root: classes.cell}}/>
             <TableCell><b>Subtotal</b></TableCell>
             <TableCell/>
-            <TableCell align="center">${calcularTotalYEnvio()}</TableCell>
+            <TableCell align="center">${calcularTotalYEnvio(false, cart)}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell><b>Envio</b></TableCell>
-            <TableCell>
-              <RadioGroup name="shipping" value={shipping} onChange={handleChange}>
-                <FormControlLabel value="withoutShipping" control={<Radio />} label="No" />
-                <FormControlLabel value="withShipping" control={<Radio />} label="Si" />
-              </RadioGroup>
-            </TableCell>
-            <TableCell align="center">
-              ${shipping === 'withShipping' ? 300 : 0}
-            </TableCell>
+            <TableCell/>
+            <TableCell align="center">$300</TableCell>
           </TableRow>
           <TableRow>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
             <TableCell classes={{root: classes.cell}}/>
-            <TableCell><b>Total</b></TableCell>
+            <TableCell classes={{root: classes.cell}}><b>Total</b></TableCell>
+            <TableCell classes={{root: classes.cell}}/>
+            <TableCell align="center" classes={{root: classes.cell}}>
+              ${calcularTotalYEnvio(true, cart)}
+            </TableCell>
+          </TableRow>
+          <TableRow>
             <TableCell />
-            <TableCell align="center">
-              ${calcularTotalYEnvio(shipping === 'withShipping')}
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell classes={{root: classes.cell}}/>
-            <TableCell classes={{root: classes.cell}}/>
-            <TableCell classes={{root: classes.cell}}/>
+            <TableCell />
+            <TableCell />
             <TableCell />
             <TableCell align="right">
-              <Button text="Comprar" variant="contained" />
+              <Link to="/checkout">
+                <Button text="Comprar" variant="contained" />
+              </Link>
             </TableCell>
-            <TableCell classes={{root: classes.cell}}/>
+            <TableCell />
           </TableRow>
         </TableBody>
       </Table>

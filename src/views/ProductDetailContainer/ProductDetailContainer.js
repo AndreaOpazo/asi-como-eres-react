@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ProductDetailContainer.css';
 import ProductDetail from '../ProductDetail/ProductDetail';
 import Spinner from '../../components/Spinner/Spinner'
-import { db } from '../../firebase';
+import { getProductByID } from '../../firebase';
 
 const ProductDetailContainer = ({ match }) => {
   const [product, setProduct] = useState({});
@@ -10,7 +10,7 @@ const ProductDetailContainer = ({ match }) => {
 
   useEffect(() => {
     (async () => {
-      const product = await db.collection('products').doc(productID).get()
+      const product = await getProductByID(productID);
       if (product.exists) {
         setProduct(product.data());
       }  
