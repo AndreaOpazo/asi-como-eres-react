@@ -53,21 +53,6 @@ const Header = () => {
               <p>ASÍ COMO ERES</p>
             </Link>
           </Grid>
-          <Grid item xs>
-            <div className={classes.search}>
-              <InputBase
-                className={classes.input}
-                placeholder="Qué estas buscando?"
-              />
-              <IconButton
-                type="submit"
-                className={classes.iconButton}
-                aria-label="search"
-              >
-                <SearchIcon />
-              </IconButton>
-            </div>
-          </Grid>
           <Grid item xs={6} container justify="flex-end">
             <Navigation />
           </Grid>
