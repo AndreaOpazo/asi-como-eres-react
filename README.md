@@ -1,3 +1,4 @@
+![gif](https://github.com/AndreaOpazo/asi-como-eres-react/blob/main/Gif%20de%20asi-como-eres%20(1).gif)
 # E-commerce Asi Como Eres, relacionada al curso de React.js de CoderHouse.
 
 Para crear esta app se utilizo React.js, Material UI, React Router Dom y  Firebase.
