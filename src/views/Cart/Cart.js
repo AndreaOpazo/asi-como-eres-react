@@ -23,7 +23,7 @@ const Cart = () => {
       {cart.length ? <CartList /> : msgAlert}
       <Link to="/">
         <br/>
-        <Button variant="contained" text="Volver al Inicio" />
+        <Button variant="contained" color="primary" text="Volver al Inicio" />
       </Link>
     </Container>
   );

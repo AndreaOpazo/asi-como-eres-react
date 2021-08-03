@@ -1,3 +1,22 @@
-.Products {
-  margin-top: 80px;
+.products {
+  margin-top: 100px;
+}
+
+.headerProducts {
+  margin-left: 20px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumb {
+  padding-top: 10px;
+}
+
+.link, link:hover {
+  color: #000;
+}
+
+.bodyProducts {
+  margin-top: 20px;
 }

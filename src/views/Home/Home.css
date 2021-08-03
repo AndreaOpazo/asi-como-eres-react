@@ -1,0 +1,17 @@
+.home {
+  background: #292929;
+  margin-top: 80px;
+}
+
+.headerCategories{
+  margin: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hrStyle {
+  border-bottom: 3px solid #fff;
+  width: 75px;
+}
