@@ -1,17 +1,27 @@
-.productsSection {
+.bestProducts {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
 }
 
-.headerProducts{
-  margin: 20px;
+.titleBestProducts {
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 35px;
 }
 
-.hrStyle {
-  border-bottom: 3px solid #fff;
-  width: 75px;
+.btnAllProducts {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
 }
+
+.sectionBestProducts {
+  background-image: url(
+    "https://firebasestorage.googleapis.com/v0/b/asi-como-eres.appspot.com/o/bgSectionBetsProducts.jpg?alt=media&token=a0d0fe10-44de-4736-a078-838399bd9cbf");
+  padding-left: 50px;
+  padding-right: 50px;
+}
+

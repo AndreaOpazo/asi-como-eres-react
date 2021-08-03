@@ -1,15 +1,8 @@
-.UserCard {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  filter: grayscale(0%);
-}
-
 .cardStyles {
   text-align: center;
+  width: 340px;
 }
 
-.UserCard:hover {
-  filter: grayscale(100%);
+.cardStyles:hover {
   transform: scale(1.03);
 }

@@ -1,0 +1,22 @@
+.category1 { grid-area: A; height: 590px;}
+.category2 { grid-area: B; }
+.category3 { grid-area: C; height: 535px;}
+.category4 { grid-area: D; height:325px;}
+
+.categories {
+  display: grid;
+  grid-template-areas:
+  'A B'
+  'A C'
+  'D C';
+  grid-gap: 40px;
+  padding: 20px;
+}
+
+div.categories >a {
+  filter: grayscale(100%);
+}
+
+div.categories > a:hover {
+  filter: grayscale(0%);
+}

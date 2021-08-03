@@ -1,3 +1,9 @@
-.Link, .Link:hover {
+.navLink{
   color: #fff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

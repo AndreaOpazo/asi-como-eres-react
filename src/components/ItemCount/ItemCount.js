@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 import './ItemCount.css';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  //logica para contador
+
   const [number, setNumber] = useState(initial);
 
   const sumarUno = () => {
@@ -19,7 +19,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     if (nuevaCantidad >= 1) setNumber(number - 1);
   };
 
-  //Cuando se agrega al carrito un producto
   const agregarAlCarrito = () => {
     if (stock > 0) onAdd(number);
   };
@@ -37,7 +36,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           </IconButton>
         </div>
         <br />
-        <Button variant="contained" text="Agregar al carrito" event={agregarAlCarrito} disabled={stock === 0} />
+        <Button variant="contained" color="primary" text="Agregar al carrito" event={agregarAlCarrito} disabled={stock === 0} />
       </div>
     </div>
   );

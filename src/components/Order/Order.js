@@ -7,7 +7,7 @@ const Order = ({ cart }) => {
   return (
     <List className="itemListOrder">
       { cart.map(({ item, quantity }) => (
-        <ListItem divider>
+        <ListItem key={item.id} divider>
           <img
               src={item.image}
               width="130px"

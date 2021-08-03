@@ -38,7 +38,7 @@ const CartList = () => {
             <TableCell align="right"><b>Precio Unitario</b></TableCell>
             <TableCell align="right"><b>Importe</b></TableCell>
             <TableCell align="center">
-              <Button text="Vaciar carrito" variant="outlined" event={() => clear()} />
+              <Button text="Vaciar carrito" color="primary" variant="outlined" event={() => clear()} />
             </TableCell>
           </TableRow>
         </TableHead>
@@ -97,7 +97,7 @@ const CartList = () => {
             <TableCell />
             <TableCell align="right">
               <Link to="/checkout">
-                <Button text="Comprar" variant="contained" />
+                <Button text="Comprar" color="primary" variant="contained" />
               </Link>
             </TableCell>
             <TableCell />
