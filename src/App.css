@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   display: flex;
   justify-content: center;
