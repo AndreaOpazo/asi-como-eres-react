@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/asi-como-eres-react/static/css/main.567c60fa.chunk.css",
-    "main.js": "/asi-como-eres-react/static/js/main.b9819b64.chunk.js",
-    "main.js.map": "/asi-como-eres-react/static/js/main.b9819b64.chunk.js.map",
-    "runtime-main.js": "/asi-como-eres-react/static/js/runtime-main.26e4a79d.js",
-    "runtime-main.js.map": "/asi-como-eres-react/static/js/runtime-main.26e4a79d.js.map",
-    "static/css/2.518346f0.chunk.css": "/asi-como-eres-react/static/css/2.518346f0.chunk.css",
-    "static/js/2.9ae1b85d.chunk.js": "/asi-como-eres-react/static/js/2.9ae1b85d.chunk.js",
-    "static/js/2.9ae1b85d.chunk.js.map": "/asi-como-eres-react/static/js/2.9ae1b85d.chunk.js.map",
-    "index.html": "/asi-como-eres-react/index.html",
-    "static/css/2.518346f0.chunk.css.map": "/asi-como-eres-react/static/css/2.518346f0.chunk.css.map",
-    "static/css/main.567c60fa.chunk.css.map": "/asi-como-eres-react/static/css/main.567c60fa.chunk.css.map",
-    "static/js/2.9ae1b85d.chunk.js.LICENSE.txt": "/asi-como-eres-react/static/js/2.9ae1b85d.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/asi-como-eres-react/static/media/oswald-vietnamese-400-normal.21fb7cde.woff2"
+    "main.css": "/static/css/main.567c60fa.chunk.css",
+    "main.js": "/static/js/main.b9819b64.chunk.js",
+    "main.js.map": "/static/js/main.b9819b64.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a97746ff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a97746ff.js.map",
+    "static/css/2.3c2c7568.chunk.css": "/static/css/2.3c2c7568.chunk.css",
+    "static/js/2.42a5f654.chunk.js": "/static/js/2.42a5f654.chunk.js",
+    "static/js/2.42a5f654.chunk.js.map": "/static/js/2.42a5f654.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.3c2c7568.chunk.css.map": "/static/css/2.3c2c7568.chunk.css.map",
+    "static/css/main.567c60fa.chunk.css.map": "/static/css/main.567c60fa.chunk.css.map",
+    "static/js/2.42a5f654.chunk.js.LICENSE.txt": "/static/js/2.42a5f654.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/oswald-vietnamese-400-normal.21fb7cde.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.26e4a79d.js",
-    "static/css/2.518346f0.chunk.css",
-    "static/js/2.9ae1b85d.chunk.js",
+    "static/js/runtime-main.a97746ff.js",
+    "static/css/2.3c2c7568.chunk.css",
+    "static/js/2.42a5f654.chunk.js",
     "static/css/main.567c60fa.chunk.css",
     "static/js/main.b9819b64.chunk.js"
   ]
